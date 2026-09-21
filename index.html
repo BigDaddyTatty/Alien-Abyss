@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#020914">
+<title>Alien Abyss</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="game"></canvas>
+<div id="ui">
+  <div id="menu" class="screen">
+    <h1>ALIEN ABYSS</h1><div class="subtitle">Survive • Adapt • Evolve</div>
+    <button id="start" type="button" onclick="window.__alienStart && window.__alienStart()">ENTER THE ABYSS</button>
+    <div class="help">Drag / move to swim<br>Hold DASH to accelerate<br>Eat smaller creatures to gain biomass<br><b>Progress saves automatically in this browser.</b></div>
+  </div>
+
+  <div id="hud" class="hidden">
+    <div class="top">
+      <div class="stat">
+        <div><span id="level" class="level">LVL 1</span> <span id="form" class="form">Larval</span></div>
+        <div class="bar"><div id="bio" class="fill bio"></div></div><div id="biotxt" class="small">0 / 30 BIO</div>
+        <div class="bar"><div id="hp" class="fill hp" style="width:100%"></div></div>
+      </div>
+      <div class="right"><div id="score" class="score">0</div><div class="small">SCORE</div><div id="depth" class="depth">Depth: 100m</div><div id="biome" class="biome">SHALLOW REEF</div></div>
+    </div>
+    <button id="pause">PAUSE</button>
+    <div id="dash">DASH</div>
+    <div id="radar"><canvas id="radarCanvas" width="132" height="132"></canvas></div>
+  </div>
+
+  <div id="evo" class="screen hidden"><div class="panel"><h2>Evolution Complete</h2><p id="evoName">New Form</p><button id="continue">CONTINUE</button></div></div>
+  <div id="over" class="screen hidden"><div class="panel"><h2>CONSUMED</h2><p id="final"></p><button id="retry">RETURN TO ABYSS</button></div></div>
+  <div id="paused" class="screen hidden"><div class="panel"><h2 style="color:#61eaff">PAUSED</h2><p>Your progress is safe.</p><button id="resume">RESUME</button><br><br><button id="menuBtn">MAIN MENU</button></div></div>
+</div>
+
+<script src="game.js"></script>
+
+<script src="game.js"></script>
+</body>
+</html>
